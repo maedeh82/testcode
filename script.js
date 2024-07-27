@@ -44,3 +44,5 @@ let person = {
 // console . log (persin . name)
 //یا
 console . log (person ["name"])
+
+// maedeh
