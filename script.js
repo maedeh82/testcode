@@ -117,3 +117,96 @@
 // not
 // ! 
 // درست را غلط میکند و برعکس
+
+// تقدم عملگر ها
+// برای اینکه بخوایم یه چیزی رو اول بزاریم یا تو تقدم بزاریم داخل پرانتز میگذاریم مثل
+// let x = (3 + 5) * 10
+// console . log ( x )
+
+// شرط ها
+// if   else if
+  
+// let hour = 13
+// if ( hour >= 6 && hour < 12) {
+//     console . log ( 'good morning' )
+// }else if ( hour > 12 && hour < 18 ) {
+//     console . log ("good afternoon")
+// } else {
+//     console . log ("good evening")
+// }
+
+// switch case
+
+// let maedeh = "admin"
+// switch (maedeh) {
+//     case "admin":
+//     console . log ("admin users")
+//     break
+//     case "guest": 
+//     console . log ("guest users")
+//     break
+//     default:
+//         console . log ("unknow users")
+// }
+
+// با استفاده از حلقه ها میتوانیم یک چیز را چند مرتبه لاگ بگیریم
+// انواع حلقه ها
+//for
+// for (let i = 0 ; i < 5 ; i++ ){
+//     console.log ("maedeh");
+//     console.log ("i")
+// }
+
+// while
+// let i = 0
+// while (i < 5){
+//     console.log (i)
+//     i++
+// }
+
+// do while
+// let i = 0
+// do{
+//     console.log (i)
+//     i++
+// }while( i < 5)
+
+// for ... in
+// const person = { name : "maedeh" , age : 21} 
+// for ( let key in person){
+//     console.log (key)
+//     console.log ( person [ key ])
+// }
+
+// for ... of
+// const colors = ["read" , "blu" , "pink"]
+// for (let color of colors){
+//     console.log (color)
+// }
+
+// برای این حلقه های بالا میتوانیم دوتا کلمه استفاده کنیم که کاربردش رو میگم پایین
+// break
+// از اون شرطی که میذاریم به بعد را لاگ نمیگیرد برای مثال
+// let i = 0
+// while(i <= 10){
+//     if (i==5){
+//         break
+//     } 
+//     console.log (i)
+//     i++
+// }
+
+// continue
+// شرط رو عددی که میذاریم فقط اون عدد اجرا نمیشود برای مثال
+// let i = 0
+// while (i <= 10){
+//     if (i==5){
+//         i++
+//         continue 
+//     }
+//     console.log (i)
+//     i++
+// }
+
+// ابجکت ها
+// وقتی یک فانگشن را داخل ابجکت میگداریم اسمش میشه متود
