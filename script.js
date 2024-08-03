@@ -47,9 +47,9 @@
 
 // آرایه ها
 
-//let users = ["maedeh" , "ali"]
-//users[2] = "love"
-//console . log (users)
+// let users = ["maedeh" , "ali"]
+// users[2] = "love"
+// console . log (users)
 // یا
 //console . log (users [0])
 //اگر بخوایم بدونیم کلا چند عنصر دارد
@@ -210,3 +210,39 @@
 
 // ابجکت ها
 // وقتی یک فانگشن را داخل ابجکت میگداریم اسمش میشه متود
+// let dayereh = {
+//     masahat: 1 ,
+//     dayere : {
+//         x:2,
+//         y:2
+    
+//     }, abad:true,
+//     draw : function(){console.log ("draw")}
+// }
+//     dayereh.draw()
+
+// factory function
+// function maedehKHan (dayere){
+//     return {
+//         dayere ,
+//         draw (){ console,log ("draw")}
+//     }
+// }
+// let maedeh1 = maedehKHan (1)
+// console.log (maedeh1)
+// اگر بخواهیم هر تعداد فانگشن اضافه کنیم فقط کافیه زیر اینا بنویسیم
+// let maedeh2 = maedehKHan (2)
+// console.log (maedeh2)
+
+// construtor function
+// دوتا راه برای جدا سازی کلمات داریم یکیش کمل نوتیشن بود این یکی پاسکال نوتیشن است که هم حرف اول هم 
+// هم حرف دوم بزرگ است مثل
+// MaedehKHanzadeh
+function Maedeh (dayere){
+    this.dayere = dayere
+    this.draw =function (){
+        console.log ('draw')
+    }
+}
+const Maedeh = new Maedeh (1)
+console.log (maedeh)
