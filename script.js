@@ -238,11 +238,173 @@
 // دوتا راه برای جدا سازی کلمات داریم یکیش کمل نوتیشن بود این یکی پاسکال نوتیشن است که هم حرف اول هم 
 // هم حرف دوم بزرگ است مثل
 // MaedehKHanzadeh
-function Maedeh (dayere){
-    this.dayere = dayere
-    this.draw =function (){
-        console.log ('draw')
-    }
-}
-const Maedeh = new Maedeh (1)
-console.log (maedeh)
+// function Maedeh (dayere){
+//     this.dayere = dayere
+//     this.draw =function (){
+//         console.log ('draw')
+//     }
+// }
+// const maedeh = new Maedeh (1)
+// console.log (Maedeh)
+
+// وقتی میخوایم یکی از ابجکتایی که ساختیمو پاک کنیم
+// const maedeh = {
+//     dayere: 1
+// }
+// maedeh. color = "read"
+// maedeh. draw = function(){
+// }
+// delete maedeh.dayere
+// console.log(maedeh)
+
+
+// فانگشن ها همان ابجکت هستند برای مثال
+// متود ها
+// call
+// function Maedeh (dayere , masahat){
+//     this.dayere = dayere
+//     this. draw = function(){
+//         console.log ("draw")
+//     }
+// }
+// const another = new Maedeh (3)
+// کد خط بالا با خط پایین باهم برابرند یک کار را انجام میدهند
+//  Maedeh.call({} , 9 , 6)
+
+ // apply
+//  function Maedeh (dayere , masahat){
+//     this.dayere = dayere
+//     this. draw = function(){
+//         console.log ("draw")
+//     }
+// }
+// const another = new Maedeh (3) 
+// کد خط بالا با خط پایین باهم برابرند یک کار را انجام میدهند
+// Maedeh.apply({} , [9 , 6])
+
+// علاوه بر فانگشن ها آرایه ها هم ابجکت هستند
+// let abj = {value : 10}
+// function Maedeh(abj){
+//     abj.value++
+// }
+// Maedeh(abj)
+// console.log (abj)
+// نکته کد های بالا
+// فانکشن ها و ارایه ها که نوعی ابجکت هستن به مقدار ادرسشون کپی میشن
+// ها مقدارشون کپی میشود value
+
+
+// پیماش کردن پراپرتی های آبجکت
+// const maedeh = {
+//     radius : 1 ,
+//     draw(){
+//         console.log ("draw")
+//     }
+// }
+// let maedehkeys = Object.keys(maedeh)
+// console.log (maedehkeys)
+
+// for(let key of maedehkeys)
+//     console.log (key)
+
+// روشی دیگر از کد های بالا
+// const maedeh = {
+//     radius : 1 ,
+//     draw(){
+//         console.log ("draw")
+//     }
+// }
+// let maedehEntries = Object.entries(maedeh)
+// for( let entry of maedehEntries){
+//     console.log (entry)
+// }
+
+// اگر بخواهیم بفهمیم پیمایش چیزی که میخوایم را نشان میدهد 
+// const maedeh = {
+//     radius : 1 ,
+//     draw(){
+//         console.log ('draw')
+//     }
+// }
+// if ('draw' in maedeh){
+//     console.log ('yess')
+//     console.log ('draw' in maedeh)
+// }
+
+
+// کلون کردن ابجکت
+// ینی تمام پراپرتی های یک ابجکت را در ابجکتی دیگر کپی کنیم
+// const maedeh = {
+//     radius : 1 ,
+//     draw(){
+//         console.log ('draw')
+//     }
+// }
+// const another = {...maedeh}
+// یا میتونیم قبل و بعد کد بالا هم چیزایی که میخوایم رو اضافه کنیم مثل
+// const another = {color : 'read' ,...maedeh , number : 4 }
+// console.log (another)
+
+
+// math ابجکت
+// برای محابات ریاضی است که نیازشون داشتیم میتونیم از گوگل دان کنیم
+
+// جاوااسکریپت استرینگ
+// این هم یکسری متود داخل گوگل داره که میتونیم بریم استفاده کنیم ازشون
+
+
+// اگر بخواهیم یه متنی رو سطر اول و متن بعدی را در سطر دوم بیاریم باید مثل کد های پایین عمل کنیم
+// const another = ` maedeh .
+// coding is cool`
+// console.log (another)
+
+// اگر بخواهیم متغیر کنیم اسمو مثلا یک متن ثابت باشد ولی اسمش تغییر کند 
+// let name = 'maedeh'
+// let msg = ' hi ' + name + ' thank you '
+// console.log (msg)
+
+// object date
+// const now = new Date ()
+// const date1 = new Date (' May 2003 11 9:00 ')
+// const date2 = new Date (4 , 2018 , 12 , 0 )
+// console. log (date1)
+
+
+// اضافه کردن المنت به ارایه
+ // push
+ // به انتهای ارایه اضافه میکند
+//  const numbers = [1 , 2, 3]
+//  console.log (numbers)
+//  numbers.push( 5 , 6 )
+//  console.log (numbers)
+
+// unshift
+ // به ابتدای ارایه اضافه میکند
+//  const numbers = [1 , 2, 3]
+//  console.log (numbers)
+//  numbers.unshift( 5 , 6 )
+//  console.log (numbers)
+
+// splice
+// به هرجایی که خواستید اضافه میکنه
+// splice (2,0,5)
+// در قسمتی ک نوشتم دو اون قسمتیه که میخوایم اضافه کنیم
+// در قسمتی که نوشتم صفر چیزیه که میخوایم حذف کنیم
+// در قسمتی که نوشتم پنج چیزیه که میخوایم اضافه شه و حتی استرینگ هم میتونه باشه
+//  const numbers = [1 , 2, 3]
+//  console.log (numbers)
+//  numbers.splice(2 , 0 , 5,'k')
+//  console.log (numbers)
+
+
+// یافتن المنت در ارایه
+// باشد const اگر
+// const numbers = [1,2,3,4]
+// console.log (numbers.indexOf(1))
+// کد بالا اولین عنصر را به من نشون میده
+// کد پایین اخرین عنصر رو که پیدا کنه رو به من نشون میده
+// const numbers = [1,2,3,4,1,5]
+// console.log (numbers.lastIndexOf(1))
+// اگر بخواهیم از یک جایی به بعد را جستجو کنه
+// const numbers = [1,2,3,4,1,5]
+// console.log (numbers.indexOf(1,2))
