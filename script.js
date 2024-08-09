@@ -442,10 +442,10 @@
 //     return scools.id === 1
 //  })
 //  console.log (Scool)
- // یک کد دیگر هم هست که به جای فایند بالا قرار میگیره و مکان اون جمله یا کلمه رو به ما میگه کجاست
- // مثلا یا صفره یا یک یا دو به همین ترتیب
- // کد دقیقشو پایین مینویسم یادت رفت لایگ بگیر ببین
- // نکته دیگ اینکه وقتی میخوای بفهمی اندیسشو میتونی به جای اینکه ایدیشو بگی مائده ام بنویسی ولی داخل نوتیشن
+//  یک کد دیگر هم هست که به جای فایند بالا قرار میگیره و مکان اون جمله یا کلمه رو به ما میگه کجاست
+//  مثلا یا صفره یا یک یا دو به همین ترتیب
+//  کد دقیقشو پایین مینویسم یادت رفت لایگ بگیر ببین
+//  نکته دیگ اینکه وقتی میخوای بفهمی اندیسشو میتونی به جای اینکه ایدیشو بگی مائده ام بنویسی ولی داخل نوتیشن
 //  const scool = [
 //     {id : 1 , name:'maedeh' , famyli : 'khanzadeh' , gpa:18},
 //     {id : 2 , name : 'ali' , family : 'sedighi' , gpa : 20}
@@ -454,7 +454,7 @@
 //     return scools.id === 1
 //  })
 //  console.log (Scool)
- // از طرف دیگر هم به جای فانگشنی که در بالا نوشته شده میتونم کوتاه ترش کنم و کد های پایین و بنویسم
+//  از طرف دیگر هم به جای فانگشنی که در بالا نوشته شده میتونم کوتاه ترش کنم و کد های پایین و بنویسم
 //  const scool = [
 //     {id : 1 , name:'maedeh' , famyli : 'khanzadeh' , gpa:18},
 //     {id : 2 , name : 'ali' , family : 'sedighi' , gpa : 20}
@@ -531,4 +531,162 @@
 // console.log (scool[2])
 
 
+// حذف تمام عنصر یا المنت های ارایه
+// let numbers = [1,2,3,4]
+// numbers = []
+// console.log (numbers)
 
+// حالا اگر بخواهیم خط دوم کد بالا یک متغیر اضافه کنیم که اونم خوانده نشود از کد پایین استفاده میکنیم
+// let numbers = [1,2,3,4]
+// let another = numbers
+// numbers.length = 0
+// console.log (numbers)
+// console.log (another)
+
+
+// چگونه دو آرایه را باهم ترکیب کنیم
+// const number = [1,2,3]
+// const numbers = [4,5,6]
+// const add = number.concat(numbers)
+// console.log (add)
+
+// چگونه از دل یک ارایه ارایه دیگر را بیرون بکشیم
+// const number = [1,2,3]
+// const numbers = [4,5,6]
+// const add = number.concat(numbers)
+// console.log (add)
+// const slice = add.slice(2,4)
+// اعداد داخل پرانتز خط بالا اولین عدد میگه مه از چه عنصری به بعد رو خارج کنه 
+// عنصر دومش میگه که قبل از چه عنصری تموم کنه جداسازی رو
+// حالا اگر عنصر دوم را وارد نکنیم از اونجایی که گفتیم تا اخر اعداد را برای ما جدا میکنه
+// و اگر هیچ ورودی بهش ندیم میاد همونو کپی میکنه
+// console.log (slice)
+
+
+// یک راه راحت تر برای اینکه دو تا ارایه رو باهم ترکیب کنیم 
+// const number = [1,2,3]
+// const numbers = [4,5,6]
+// const add = [...number,...numbers]
+// console.log (add)
+// اگر هم بخواهیم میتوانیم در قسمت ادد به اول اخرش چیزی که میخوایم رو اضافه کنیم مثل کد پایین
+// const add = ['m',...number,'a',...numbers]
+// console.log (add)
+
+
+// برای اینکه هر یک از اعداد در یک خط جدا قرار بگیرد
+// باید از حلقه فور اف استفاده شود
+// const numbers = [1,2,3]
+// for(let number of numbers)
+//     console.log (number)
+
+// راه دیگر برای کد های بالا
+// فور ایچ
+// هر بار میاد اون ارایه ای داریم و صدا میزنه حالا هر تعداد که داشته باشیم
+// const numbers = [1,2,3]
+// numbers.forEach(function(number){
+//     console.log (number)
+//     console.log (number+10)
+// })
+// در رابطه با به علاوه 10
+// اگر بخواهیم به اعدادی که داریم هرچند عدد اضافه کنیم کافیه داخل پرانتزی ک میخوام لاگ بگیریم
+// بنویسیم به علاوه حالا هر عددی ک خواستیم واعدادمون رو به علاوه اون عدد کنه
+
+
+
+// جدا کردن ارایه ها از هم
+// برای مثال من میخوام به جای و بین اعدادم فاصله بزاره 
+// const numbers = [1,2,3,4]
+// const joined = numbers.join(' ')
+// console.log (joined)
+
+
+// مرتب کردن ارایه ها
+// بر اساس اعداد
+// const numbers = [5,4,3,2,1]
+// numbers.sort()
+// console.log (numbers)
+
+// چگونه ترتیب ارایه را برعکس کنیم 
+// const numbers = [1,2,3,4,5]
+// const reverse = numbers.reverse()
+// console.log (reverse)
+
+// مرتب کردن بر اساس حروف الفبا
+// const scool = [
+//     {id : 1 , name : 'maedeh'},
+//     {id : 2 , name : 'ali'}
+// ]
+// scool.sort(function(a,b){
+//     if(a.name<b.name)return -1
+//     if(b.name<a.name)return 1
+//     return 0
+// })
+// console.log (scool)
+
+
+// تست المنت های ارایه
+// every
+// اگر حتی یک عدد منفی هم داشته باشیم نتیجه فالز میشود
+// برای مثال میخوایم ببینیم همه ارایه ها فرد هستن یا زوج هستن یا هر چیز دیگری
+// ما میخوایم ببینیم همه اعداد مثبت هستند یا نه
+//  این شرط تا جایی ادامه پیدا میکنه ک یه عدد منفی باشد
+// const numbers = [1,2,3,4]
+// const number = numbers.every(function(value){
+//     return value >= 0
+// })
+// console.log (number)
+
+
+// some
+// حتی اگر یدونه ام عدد مثبت داشته باشه نتیجه درست میشه
+// const numbers = [-1,-2,-3,4]
+// const number = numbers.some(function(value){
+//     return value >= 0
+// })
+// console.log (number)
+
+
+// چگونه ارایه رو بر اساس یک شرط فیلتر کنیم
+// برای مثال میخوایم فقط اعداد مثبت را به ما نشان دهد
+// const numbers = [1,-1,2,-2,3]
+// const filtered = numbers.filter(function(value){
+//     return value >= 0
+// })
+// console.log (filtered)
+
+// میخوایم به جای ولیو از ارایه استفاده کنیم
+// برای مثال معدل بالای 18 رو برای من نشون بده
+// const scool = [
+//     {id : 1 , name : 'maedeh' , age : 21 , gpa : 18},
+//     {id : 2 , name : 'ali' , age : 25 , gpa : 20},
+//     {id : 3 , name : 'mohamad' , age : 18 , gpa : 16},
+//     {id : 4 , name : 'zahra' , age : 40 , gpa : 15}
+// ]
+// const filtered = scool.filter(
+//     scool=> scool.gpa>=18
+// )
+// console.log (filtered)
+
+
+// مپ کردن ارایه
+// هر المنت داخل ارایه رو میتونیم به چیز دیگه تغییر بدیم
+// برای مثال میخوایم هر یک از عنصر هایی ک داریم و دو برابر کنه
+// const numbers = [1,2,3,4]
+// const number = numbers.map (function(value){
+//     return value * 2
+// })
+// console.log (number)
+
+// مثالی دیگر از مپ کردن 
+//مثالی از یک ارایه استرینگی را به یک ارایه ابجکتی نوشتن
+// const name = ['maedeh' , 'ali' , 'sara' , 'reza']
+// const items = name.map(function(names){
+//     return {valeu : names}
+    
+// })
+// console.log (items)
+// کد های بالا میاد قبل اسمایی ک میخوایم یک ولیو دو نقطه میزاره
+
+
+// انجام میده this کاری که
+// به فانگشن فعلی که در ابجکت وجود دارد و در حال اجراس اشاره میکنه
