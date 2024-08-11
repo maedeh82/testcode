@@ -689,4 +689,144 @@
 
 
 // انجام میده this کاری که
-// به فانگشن فعلی که در ابجکت وجود دارد و در حال اجراس اشاره میکنه
+// به ابجکتی که در فانگشن فعلی شماست اشاره میکند
+// this برای مثال استفاده از
+// وقتی که بخواهیم یک عنوانی رو جایگزین عنوان داخل فانگشنمون کنیم
+// function video (title){
+//     this.title=title
+//     console.log (this)
+// }
+// const v = new video ("maedeh")
+
+// this مثالی دیگر از
+// const video = {
+//     title : 'a',
+//     tags : ['a' , 'b' , 'c'],
+//     showTags (){
+//         this.tags.forEach(function(tags){
+//             console.log (this,tags)
+//         }, this )
+//     }
+// }
+// video.showTags()
+// کدای بالا رو نفهمیدم
+
+
+// hoisting
+// وقتی یک فانگشن خالی بدون متغیر داشته باشیم مثل مثال زیر
+// function video(){
+//     console.log (video)
+// }
+// video()
+// ما میتونیم صدا زدن ویدیو رو خط اول هم بیاریم بعد فانکشنمون رو بنویسیم
+// hoisting که به اینکار میگن
+
+
+// آرگومان
+// در کد های پایین هرچند تا ارگومان هم میداشتیم بار فقط دوتا ارگومان اول را جمع میکرد
+// function maedeh (a , b){
+//     console.log ()
+//     return a+b
+// }
+// console.log (maedeh(1,2))
+// مقدار یک و دو که دادم میشن ارگومان
+
+// حالا اگر بخواهیم که ارگومان بیشتری داشته باشیم ولی دو عنصر 
+// a , b
+// داشته باشیم و بخواهیم همه ارگومان هارو باهم جمع کند از کد های زیر استفاده میکنیم
+// function maedeh (a , b){
+//     console.log (arguments)
+//     let total = 0
+//     for(let valeu of arguments)
+//         total += valeu
+//     return total
+// }
+// console.log (maedeh( 1 , 2 , 3 , 6 , 8 ))
+
+
+// وقتی میخوایم جمع تمام اعداد داخل یک متغیر را حساب کنیم
+// const numbers = [1 , 2 , 3 , -1]
+// let sum = 0
+// for(let n of numbers)
+//     sum = sum +n
+// console.log (sum)
+
+// یک راه دیگر برای کد های بالا 
+// const numbers = [ 1 , 2 , 3 , -1]
+// let sum = numbers.reduce(function( a , b){
+//     return a + b
+// } )
+// console.log (sum)
+
+
+// مقدار دهی اولیه پارامتر
+// برای مثال میخواهیم سود بانکی را محاسبه کنیم 
+// ولی مقدارشو میخوایم هرچی که خواستیم بزاریم 
+// و هر وقت که خواستیم عوضش کنیم
+// function interest (aslPool , nerkh , sal){
+//     return ((aslPool * nerkh) / 100) * sal
+// }
+// console.log (interest(1000000 , 3.5 , 5))
+
+// حالا اگر نرخ و سال رو طرف خودش وارد نکرد بیایم یه نرخ و سال دیفالت بدیم
+// اگر هم وارد کرده بود اون دیفالته خونده نمیشه
+// function interest (aslPool , nerkh=3.5 , sal=5){
+//     return ((aslPool * nerkh) / 100) * sal
+// }
+// console.log (interest(1000000 ))
+// نکته این قضیه اینجاست که اگر نرخ و مقدار دیفالت بهش دادیم بعدیشم باید مقدار دیفالت بگیره
+// وگرنه کد اجرا نمیشه
+// فقط در صورتی میشه اینکارو کرد که مقدار نرخ رو در کنسول اندیفایند بدیم مثل مثال زیر
+// function interest (aslPool , nerkh=3.5 , sal){
+//     return ((aslPool * nerkh) / 100) * sal
+// }
+// console.log (interest(1000000 , undefined , 5 ))
+// ولی بهترین کار اینه که اون پارامتری که بهش دیفالت دادیم اخر بمونه تا نیاز به کد بالا نباشه
+
+
+// یک نوع دیگر از ابجکت ها
+// وقتی بخواهیم اسم و فامیل طرف را در یک خط بیاریم
+// getters
+// const person = {
+//     fname : 'maedeh',
+//     lname : 'khanzadeh',
+//     get fulname (){
+//         return `${person.fname} ${person.lname}`
+//     }
+// }
+// console.log (person.fulname)
+// حالا اگر بخواهیم اسممون رو عوض کنیم یا یک مقدار دیگر بهش بدیم از کد زیر استفاده میکنیم 
+// const person = {
+//     fname : 'maedeh',
+//     lname : 'khanzadeh',
+//     get fullName (){
+//         return `${person.fname} ${person.lname}`
+//     },
+//     set fullName (value){
+//         const parts = value.split(' ')
+//         this.fname = parts [0]
+//         this.lname = parts [1]
+//     }
+// }
+// person.fullName = 'ali sedighi'
+// console.log (person.fullName)
+
+
+// rest عملگر
+// راهی دیگر برای جمع کردن اعداد از راه 
+// rest
+// با فرق اینکه اعدادو بعد از کد خودت بهش میدی
+// function sum (...args){
+//     return args.reduce((a , b)=>a+b)
+// }
+// console.log (sum(1,2,3,4,15))
+// یک مسئله از کدای بالا
+// میخوایم تخفیف رو بر یک یا چند محصولی که خریداری شده اعمال کنیم
+// function buy (discount , ...args){
+//     const total = args.reduce((a , b)=>a+b)
+//     return total * (1- discount)
+// }
+// console.log (buy (0.5 , 1 , 2 , 3 , 4 , 10))
+// نکته درباره مسئله بالا 
+// تخفیف یا هرچیزی که میخوایم اعمال کنیم رو قبل از سه نقطه ارگس باید بزاریم حتما
+
