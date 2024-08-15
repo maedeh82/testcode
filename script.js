@@ -41,7 +41,7 @@
 // console . log (person)
 
 // اگر بخواهیم یکی از چیزایی ک نوشتیم را لاگ بگیرد
-// console . log (persin . name)
+// console . log (person.name)
 // یا
 // console . log (person ["name"])
 
@@ -50,8 +50,10 @@
 // let users = ["maedeh" , "ali"]
 // users[2] = "love"
 // console . log (users)
-// یا
+
+// لاگ گرفتن یک عنصر از ارایه
 // console . log (users [0])
+
 // اگر بخوایم بدونیم کلا چند عنصر دارد
 // console . log (users.length)
 
@@ -66,6 +68,12 @@
 //     console . log (" hello " + name + " you are " + age + " years old ")
 // }
 // maedeh(" maedeh " , 21)
+
+//پاس دادن ابجکت به فانکشن
+// function maedeh(props){
+//         console . log (" hello " + props.name + " you are " + props.age + " years old ")
+// }
+// maedeh({name : "ali", age : 21 })
 
 // عملگر های محاسباتی
 // + و - و / و * و %
@@ -98,6 +106,8 @@
 
 // let maedeh = true
 // let bottontex = maedeh === true ? "dashbord" : login
+// خلاصه شده  
+// let bottontex = maedeh? "dashbord" : login
 // console . log (bottontex)
 
 // عملگر های منطقی
@@ -269,7 +279,7 @@
 //     }
 // }
 // const another = new Maedeh (3)
-// کد خط بالا با خط پایین باهم برابرند یک کار را انجام میدهند
+// // کد خط بالا با خط پایین باهم برابرند یک کار را انجام میدهند
 //  Maedeh.call({} , 9 , 6)
 
 //  apply
@@ -374,12 +384,15 @@
 // let name = 'maedeh'
 // let msg = ' hi ' + name + ' thank you '
 // console.log (msg)
+// راه بهتر کد پاییین
+// let massage = `hi ${name} thant you` 
 
 // object date
-// const now = new Date ()
+const now = new Date ()
 // const date1 = new Date (' May 2003 11 9:00 ')
 // const date2 = new Date (4 , 2018 , 12 , 0 )
-// console. log (date1)
+// دریافت متد های مختلف مربوط تاریخ ساعت و
+console. log (now.getFullYear())
 
 
 // اضافه کردن المنت به ارایه
@@ -434,6 +447,9 @@
 // همان بحث ذخیره به عنوان ادرس 
 // اگر قسمت ریتورن 1 بگذاریم ایدی یک را نشان میدهد و اگر 2 بگذاریم ایدی دو را نشان میدهد
 // به حروف کوچیک و بزرگ دقت کن 
+// وقتی داخل یک ارایه بخواهیم ابجکتش رو پیدا کنیم از 
+// FIND 
+// استفاده میکنیم
 //  const scool = [
 //     {id : 1 , name:'maedeh' , famyli : 'khanzadeh' , gpa:18},
 //     {id : 2 , name : 'ali' , family : 'sedighi' , gpa : 20}
@@ -583,7 +599,7 @@
 // فور ایچ
 // هر بار میاد اون ارایه ای داریم و صدا میزنه حالا هر تعداد که داشته باشیم
 // const numbers = [1,2,3]
-// numbers.forEach(function(number){
+// numbers.forEach((number)=>{
 //     console.log (number)
 //     console.log (number+10)
 // })
@@ -630,7 +646,7 @@
 // برای مثال میخوایم ببینیم همه ارایه ها فرد هستن یا زوج هستن یا هر چیز دیگری
 // ما میخوایم ببینیم همه اعداد مثبت هستند یا نه
 //  این شرط تا جایی ادامه پیدا میکنه ک یه عدد منفی باشد
-// const numbers = [1,2,3,4]
+// const numbers = [1,2,3,4,]
 // const number = numbers.every(function(value){
 //     return value >= 0
 // })
@@ -679,12 +695,21 @@
 
 // مثالی دیگر از مپ کردن 
 //مثالی از یک ارایه استرینگی را به یک ارایه ابجکتی نوشتن
+// مپ مثل فور ایچ و حلقه های دیگر عمل میکنه 
+// فرقش اینه که بقیه حلقه ها اید بهشون بگی که وایسا ولی مپ به تعداد ایتمای یه ارایه حلقه میزنه
+// نیاز نیست بهش بگی وایسا
+// let values = []
 // const name = ['maedeh' , 'ali' , 'sara' , 'reza']
 // const items = name.map(function(names){
-//     return {valeu : names}
+//     if (names=='maedeh') {
+//     values.push({value : 0})  
+//     } else {
+//         values.push({valeu : names}) 
+
+//     }
     
 // })
-// console.log (items)
+// console.log (values)
 // کد های بالا میاد قبل اسمایی ک میخوایم یک ولیو دو نقطه میزاره
 
 
@@ -830,3 +855,15 @@
 // نکته درباره مسئله بالا 
 // تخفیف یا هرچیزی که میخوایم اعمال کنیم رو قبل از سه نقطه ارگس باید بزاریم حتما
 
+
+// مسئله
+// لاگ گرفتن اعداد زوج از یک تا پنجاه
+// function even (numberStart , numberEnd){
+//     for (let i = numberStart ; i < numberEnd ; i++){
+//         if (i % 2 === 0){
+//             console.log (i)
+//         }
+//     }
+// }
+
+// even(1 , 100)
