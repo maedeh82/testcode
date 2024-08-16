@@ -388,11 +388,11 @@
 // let massage = `hi ${name} thant you` 
 
 // object date
-const now = new Date ()
+// const now = new Date ()
 // const date1 = new Date (' May 2003 11 9:00 ')
 // const date2 = new Date (4 , 2018 , 12 , 0 )
 // دریافت متد های مختلف مربوط تاریخ ساعت و
-console. log (now.getFullYear())
+// console. log (now.getFullYear())
 
 
 // اضافه کردن المنت به ارایه
@@ -868,3 +868,8 @@ console. log (now.getFullYear())
 
 // even(1 , 100)
     
+let maedeh = [10 , 15 , 20 , 20 , 17]
+let sum = 0
+for (let m of maedeh)
+    sum = sum + m / 5
+console.log (sum)
