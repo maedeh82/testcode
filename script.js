@@ -868,8 +868,47 @@
 
 // even(1 , 100)
     
-let maedeh = [10 , 15 , 20 , 20 , 17]
-let sum = 0
-for (let m of maedeh)
-    sum = sum + m / 5
-console.log (sum)
+
+const scole = [
+    { name: 'Ali', score: 7, comment: 'Excellent service!' },
+    { name: 'mamad', score: 4, comment: 'It was okay.' },
+    { name: 'maedeh', score: 4, comment: 'Good, but could be better.' },
+    { name: 'zahrd', score: 2, comment: 'Not satisfied.' },
+    { name: 'reza', score: 5, comment: 'Amazing expece!' }
+];
+
+
+const maedeh=()=>{
+    let num = 0
+    let comment=[]
+
+    scole.forEach(item => {
+      num = num + item.score / scole.length
+    });
+
+    num = Math.round(Number(num))
+    console.log("averange=>",num)
+
+    const sort = scole.sort(function(a,b){
+        if(a.comment.length<b.comment.length)return -1
+        return 0
+    })
+
+    sort.forEach(i => {
+    if (i.score>num) {
+        comment.push(
+            {
+               name : i.name,
+               coment : i.comment
+            }
+        )
+    }
+
+});
+console.log("comment=>",comment)
+
+}
+
+
+
+maedeh()
