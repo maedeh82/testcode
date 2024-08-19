@@ -869,46 +869,68 @@
 // even(1 , 100)
     
 
-const scole = [
-    { name: 'Ali', score: 7, comment: 'Excellent service!' },
-    { name: 'mamad', score: 4, comment: 'It was okay.' },
-    { name: 'maedeh', score: 4, comment: 'Good, but could be better.' },
-    { name: 'zahrd', score: 2, comment: 'Not satisfied.' },
-    { name: 'reza', score: 5, comment: 'Amazing expece!' }
-];
+// const scole = [
+//     { name: 'Ali', score: 7, comment: 'Excellent service!' },
+//     { name: 'mamad', score: 4, comment: 'It was okay.' },
+//     { name: 'maedeh', score: 4, comment: 'Good, but could be better.' },
+//     { name: 'zahrd', score: 2, comment: 'Not satisfied.' },
+//     { name: 'reza', score: 5, comment: 'Amazing expece!' }
+// ];
 
 
-const maedeh=()=>{
-    let num = 0
-    let comment=[]
+// const maedeh=()=>{
+//     let num = 0
+//     let comment=[]
 
-    scole.forEach(item => {
-      num = num + item.score / scole.length
-    });
+//     scole.forEach(item => {
+//       num = num + item.score / scole.length
+//     });
 
-    num = Math.round(Number(num))
-    console.log("averange=>",num)
+//     num = Math.round(Number(num))
+//     console.log("averange=>",num)
 
-    const sort = scole.sort(function(a,b){
-        if(a.comment.length<b.comment.length)return -1
-        return 0
-    })
+//     const sort = scole.sort(function(a,b){
+//         if(a.comment.length<b.comment.length)return -1
+//         return 0
+//     })
 
-    sort.forEach(i => {
-    if (i.score>num) {
-        comment.push(
+//     sort.forEach(i => {
+//     if (i.score>num) {
+//         comment.push(
+//             {
+//                name : i.name,
+//                coment : i.comment
+//             }
+//         )
+//     }
+
+// });
+// console.log("comment=>",comment)
+
+// }
+
+
+
+// maedeh()
+
+
+// مسئله
+let student = [
+    {id : 1 , firstName : 'maedeh' , lastName : 'khanzadeh' , gpa : 18 },
+    {id : 2 , firstName : 'ali' , lastName : 'sedighi' , gpa : 20},
+    {id : 3 , firstName : 'zahra' , lastName : 'moradi' , gpa : 17},
+    {id : 4 , firstName : 'mohamad' , lastName : 'namati' , gpa : 16}
+]
+let stu = []
+    student.forEach(i => {
+      if (i.firstName){
+        stu.push(
             {
-               name : i.name,
-               coment : i.comment
+                firstName:i.firstName,
+                lastName:i.lastName
+             
             }
         )
-    }
-
-});
-console.log("comment=>",comment)
-
-}
-
-
-
-maedeh()
+      }  
+    });
+console.log (stu)
