@@ -915,22 +915,106 @@
 
 
 // مسئله
-let student = [
-    {id : 1 , firstName : 'maedeh' , lastName : 'khanzadeh' , gpa : 18 },
-    {id : 2 , firstName : 'ali' , lastName : 'sedighi' , gpa : 20},
-    {id : 3 , firstName : 'zahra' , lastName : 'moradi' , gpa : 17},
-    {id : 4 , firstName : 'mohamad' , lastName : 'namati' , gpa : 16}
-]
-let stu = []
-    student.forEach(i => {
-      if (i.firstName){
-        stu.push(
-            {
-                firstName:i.firstName,
-                lastName:i.lastName
+// let student = [
+//     {id : 1 , firstName : 'maedeh' , lastName : 'khanzadeh' , gpa : 18 },
+//     {id : 2 , firstName : 'ali' , lastName : 'sedighi' , gpa : 20},
+//     {id : 3 , firstName : 'zahra' , lastName : 'moradi' , gpa : 17},
+//     {id : 4 , firstName : 'mohamad' , lastName : 'namati' , gpa : 16}
+// ]
+// let stu = []
+//     student.forEach(i => {
+//       if (i.firstName){
+//         stu.push(
+//             {
+//                 firstName:i.firstName,
+//                 lastName:i.lastName
              
-            }
-        )
-      }  
-    });
-console.log (stu)
+//             }
+//         )
+//       }  
+//     });
+// console.log (stu)
+
+
+// مسئله
+// const number = [5 , 5]
+// let plus = 0
+// number.forEach(n => {
+//   plus=plus+n
+// });
+
+// console.log (plus)
+
+
+// مسئله
+// let student = [
+//     {id : 1 , firstName : 'maedeh' , lastName : 'khanzadeh' , gpa : 18 },
+//     {id : 2 , firstName : 'ali' , lastName : 'sedighi' , gpa : 20},
+//     {id : 3 , firstName : 'zahra' , lastName : 'moradi' , gpa : 17},
+//     {id : 4 , firstName : 'mohamad' , lastName : 'namati' , gpa : 16}
+// ]
+// const filtered =student.filter(student=>student.gpa>=18)
+  
+// console.log ("gpa>=18=>",filtered)
+
+
+// مسئله
+// let student = [
+//     {id : 1 , firstName : 'maedeh' , lastName : 'khanzadeh' , gpa : 18 },
+//     {id : 2 , firstName : 'ali' , lastName : 'sedighi' , gpa : 20},
+//     {id : 3 , firstName : 'zahra' , lastName : 'moradi' , gpa : 17},
+//     {id : 4 , firstName : 'mohamad' , lastName : 'namati' , gpa : 16}
+// ]
+//  const stus = student.find((s)=>{
+//     return s.id === 1
+//  })
+// const stu = ()=>{
+//   if (stus) {
+//     console.log (stus.id)
+//   } else {
+//     console.log(undefined)
+//   }
+// }
+// console.log (stus)
+// stu()
+
+
+
+// مسئله
+// let student = [
+//     {id : 1 , firstName : 'maedeh' , lastName : 'khanzadeh' , gpa : 18 },
+//     {id : 2 , firstName : 'ali' , lastName : 'sedighi' , gpa : 20},
+//     {id : 3 , firstName : 'zahra' , lastName : 'moradi' , gpa : 17},
+//     {id : 4 , firstName : 'mohamad' , lastName : 'namati' , gpa : 16}
+// ]
+// const stu = student.splice(2 , 4 , 'maedeh')
+// console.log (student)
+
+
+
+// مسئله
+// let student = [
+//   {id : 1 , firstName : 'maedeh' , lastName : 'khanzadeh' , gpa : 18 },
+//   {id : 2 , firstName : 'ali' , lastName : 'sedighi' , gpa : 20},
+//   {id : 3 , firstName : 'zahra' , lastName : 'moradi' , gpa : 17},
+//   {id : 4 , firstName : 'mohamad' , lastName : 'namati' , gpa : 16}
+// ]
+// let aver = 0
+// student.forEach(students => {
+//     aver += students.gpa  
+//   });
+// aver = aver / student.length
+
+// console.log ('aver=>',aver)
+
+
+
+// مسئله 
+// let number = [1,2,3,4,5,6,7,8]
+// let n = 0
+// number.forEach((number)=>{
+//   if (number % 2 === 0) {
+//     n=n+number
+//   }
+// })
+// console.log (n)
