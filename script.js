@@ -1018,3 +1018,100 @@
 //   }
 // })
 // console.log (n)
+
+
+// مسئله 
+// let products = [
+//     { name: 'ali', price: 1500000 },
+//     { name: 'maei', price: 80000 },
+//     { name: 'zary', price: 60000 },
+//     { name: 'mmd', price: 300000 },
+//     { name: 'leyli ', price: 50000 }
+//   ];
+//   let p = []
+//   products.forEach((i) => {
+//     if (i.price < 100000) {
+//         p.push(i)
+//     }
+// });  
+// console.log(p)
+
+
+// مسئله
+// let numbers = [3, 7, 4, 12, 5, 8, 10];
+// let n = []
+// numbers.forEach(i => {
+//     if (i %2 === 0) {
+//         n.push(i)
+//     }
+// });
+// console.log (n)
+
+
+
+// مسئله 
+// let words = ["apple", "banana", "cherry", "blueberry", "strawberry"];
+// let w = ''
+// words.forEach((a)=> {
+//     if (a.length>w.length) {
+//         w=a
+//     }
+
+// });
+// console.log (w)
+
+
+// مسئله
+// let numbers = [10, 15, 20, 25, 30];
+// let x = 0
+// numbers.forEach(n => {
+//     if (n % 2=== 0) {
+//         x += n
+//     }
+// });
+// console.log(x)
+
+
+// مسئله
+// let number = -5
+// function numbers(){
+//     if (number > 0) {
+//         console.log (true)
+//     } else if (number < 0){
+//         console.log (false)
+//     }
+//     else{
+//         console.log (0)
+//     }
+    
+// }
+// numbers()
+
+
+// مسئله 
+// let number = 20
+// function numbers (){
+//     if (number %2===0) {
+//         console.log (true)
+//     } else {
+//         console.log (false)
+//     }
+// }
+// numbers()
+
+
+
+// مسئله 
+// let number = 5
+// function numbers (){
+//     if (number > 0) {
+//         console.log (true)
+//     }
+//     else if (number < 0){
+//         console.log (false)
+//     }
+//     else {
+//         console.log (0)
+//     }
+// }
+// numbers()
