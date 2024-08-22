@@ -1115,3 +1115,33 @@
 //     }
 // }
 // numbers()
+
+
+
+// مسئله 
+// let students = [
+//     {id: 1, firstName: 'maedeh', lastName: 'khanzadeh', gpa: 18},
+//     {id: 2, firstName: 'ali', lastName: 'sedighi', gpa: 20},
+//     {id: 3, firstName: 'zahra', lastName: 'moradi', gpa: 17},
+//     {id: 4, firstName: 'mohamad', lastName: 'namati', gpa: 16}
+//   ];
+//   let x = 0
+// students.forEach(i => {
+//         x += i.gpa
+// });  
+// let aver = x / students.length
+// console.log (aver)
+// let y = students.filter(i=>i.gpa>aver)
+// console.log (y)
+
+
+// مسئله 
+let students = [
+    {id: 1, firstName: 'maedeh', lastName: 'khanzadeh', gpa: 18},
+    {id: 2, firstName: 'ali', lastName: 'sedighi', gpa: 20},
+    {id: 3, firstName: 'zahra', lastName: 'moradi', gpa: 17},
+    {id: 4, firstName: 'mohamad', lastName: 'namati', gpa: 16}
+  ];
+  // دانشجویی که بیشترین معدل را دارد
+  let x = students[1]
+  console.log (x)
