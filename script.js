@@ -1136,12 +1136,92 @@
 
 
 // مسئله 
-let students = [
-    {id: 1, firstName: 'maedeh', lastName: 'khanzadeh', gpa: 18},
-    {id: 2, firstName: 'ali', lastName: 'sedighi', gpa: 20},
-    {id: 3, firstName: 'zahra', lastName: 'moradi', gpa: 17},
-    {id: 4, firstName: 'mohamad', lastName: 'namati', gpa: 16}
-  ];
-  // دانشجویی که بیشترین معدل را دارد
-  let x = students[1]
-  console.log (x)
+// let students = [
+//     {id: 1, firstName: 'maedeh', lastName: 'khanzadeh', gpa: 18},
+//     {id: 2, firstName: 'ali', lastName: 'sedighi', gpa: 20},
+//     {id: 3, firstName: 'zahra', lastName: 'moradi', gpa: 17},
+//     {id: 4, firstName: 'mohamad', lastName: 'namati', gpa: 16}
+//   ];
+// دانشجویی که بیشترین معدل را دارد
+//   let x = students[1]
+//   console.log (x)
+
+
+// متغیر وار 
+// var name1 ="ali"
+// وار وقتی داخل یک فانگشن است بیرون اون فانکشن هم خوانده میشود 
+// در کل که استفاده از وار زیاد مناسب نیست در برنامه نویسی
+
+
+
+// برای اینکه ارورمون رو بعضی وقتا از بین ببریم 
+// const person = {
+//   fname : 'maedeh',
+//   lname : 'khanzadeh',
+//   get fulName(){
+//     return `${person.fname} ${person.lname}`
+//   },
+//   set fulName(valeu){
+//     const parts = valeu.split('')
+//     this.fname=parts[0]
+//     this.lname=parts[1]
+
+
+//   }
+// }
+// person.fulName=true
+// console.log (person)
+// کد های بالا یک اروری به میدن که معنیش اینه که ولیو دات اسپلیت یک استرینگ نیست
+// برای از بین بردن ارور بالا کافیه یک شرط اضافه بشه مثل کد پایین
+// const person = {
+//   fname : 'maedeh',
+//   lname : 'khanzadeh',
+//   get fulName(){
+//     return `${person.fname} ${person.lname}`
+//   },
+//   set fulName(valeu){
+//     if (typeof valeu !== 'string'){
+//       return 
+//     }
+//     const parts = valeu.split('')
+//     this.fname=parts[0]
+//     this.lname=parts[1]
+
+
+//   }
+// }
+// person.fulName=true
+// console.log (person)
+
+
+
+// متود
+// bind
+// میاد یک فانگشن جدید میسازه و
+// this
+// را به یک مقدار جدیدی ک بهش دادیم تبدیل میکنه
+// function names (){
+//   console.log (this)
+// }
+// const n = names.bind({name:'maedeh'})
+// n()
+// کد های بالا مقدار 
+// this
+// را تغییر میدهد
+
+
+
+// اصول برنامه نویسی شی گرا
+// نوع اول
+// ما ر یک فانگشن اکر نخواهیم از بیرون فانکشن دسترسی داشته باشیم بهش که مقدارش را عوض کنیم یا هرچیز
+// دیگر اگر برای هر یک از تعریفایی ک کردیم
+// this.
+// گذاشته بودیم اون قسمت هایی که نمیخواهیم تغییری از بیرون فانکشن روشون انجام بشه رو باید از
+// let
+// استفاده کنیم وقتی اینکار را انجام دهیم دیگر از بیرون بهش دسترسی نداریم
+
+
+
+// وراثت
+// بدون اینکه کد هامون رو کپی پیست کنیم میتونیم از اون ها استفاده کنیم
+// پروتوتایپ
