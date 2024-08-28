@@ -1225,3 +1225,49 @@
 // وراثت
 // بدون اینکه کد هامون رو کپی پیست کنیم میتونیم از اون ها استفاده کنیم
 // پروتوتایپ
+
+
+
+
+// مسئله 
+// let people = [
+//     {id: 1, name: 'maedeh', age: 25},
+//     {id: 2, name: 'ali', age: 32},
+//     {id: 3, name: 'zahra', age: 29},
+//     {id: 4, name: 'mmd', age: 35}
+//   ];
+//   let x = 0
+//   people.forEach(i => {
+//     if (x=i.age) {
+//         console.log(i)
+//     }
+//   });
+//   console.log (x)
+  
+
+// هر ابجکت یک پروتوتایپ داره غیر از ابجکت بیس
+// object base
+// وقتی میخوایم پروتوتایپ رو بگیریم از کد زیر استفاده میکنم
+// let x =[]
+// x.__proto__
+
+
+// function circle(radius){
+//     this.radius=radius
+//     this.move = function(){
+//         console.log('move')
+//     }
+// }
+
+// برای اینکه ریدیوس و موو و دراو رو لاگ بگیریم فقط از کد های زیر استفاده میکنیم
+// return all members
+// circle.prototype.draw = function(){
+//     console.log('draw')
+// }
+// const c1 = new circle(1)
+// for (let key in c1){
+//     console.log(key)
+// }
+
+
+
