@@ -1271,3 +1271,116 @@
 
 
 
+// کلاس ها
+// class circle{
+//     constructor(radius){
+//     this.radius = radius
+//     }
+//     draw(){
+//         console.log('draw')
+//     }
+// }
+// const c = new circle (1)
+// console.log (c)
+// کد های بالا میاد مقدار یک را در ریدیوس میگذارد
+
+
+
+// وقتی میخواهیم جزئیات را مخفی کنیم و یه سری چیزایی که خودمون میخوایم رو نشون بدیم
+// یکی از راه ها برای این کار استفاده از اندرلاین است برای مثال 
+// class circle{
+//     constructor(_radius){
+//     this._radius
+//     }
+// }
+// const c = new circle (1)
+// console.log(c)
+// به این صورت دیگر مقدار ریدیوس خوانده نمیشود
+
+// راه دوم و بهتر برای این کار کد های زیر است
+// const _radius = Symbol()
+
+// class circle {
+//     constructor(radius){
+//         this[_radius] = radius
+//     }
+// }
+// const c = new circle (1)
+// console.log(c)
+
+
+
+// مخفی کردن اعضا با استفاده از 
+// weakMap
+// برای اینکه از بیرون کلاسمون خونده نشه کدامون استفاده میشه کد های پایین
+// const _radius = new WeakMap()
+// class circle {
+//     constructor(radius){
+//         _radius.set(this , radius)
+//     }
+// }
+// const c = new circle (1)
+// console.log(c)
+
+
+
+
+// وراثت در کلاس ها 
+// class shape {
+//     move (){
+//         console.log('move')
+//     }
+// }
+// class circle extends shape {
+//     draw (){
+//         console.log ('draw')
+//     }
+// }
+// const c = new circle ()
+// console.log (c)
+
+// وقتی میخواهیم کلاس پدر یا همان شیپ در کد های بالا را صدا بزنیم کافیه داخل کلاس سرکل کد های زیر را 
+// اضافه کنید
+// class shape {
+//     constructor(color){
+//         this.color = color
+//     }
+//     move(){
+//         console.log('move')
+//     }
+//     }
+// class circle extends shape {
+//     constructor(color){
+//         super(color)
+//     }
+//     draw (){
+//         console.log ('draw')
+//     }
+// }
+// const c = new circle ('red')
+// console.log (c)
+
+
+
+// باز تعریف کردن متود ها
+// برای مثال ما یک کلاس داریم به اسم شیپ و اجزای داخل شیپ داریم میخواهیم داخل کلاس سرکل بریزیم
+// شیپ : پدر  و سرکل : فرزند
+// class shape{
+//     move(){
+//         console.log('move')
+//     }
+// }
+
+// class circle extends shape{
+//     move (){
+//         super.move( )
+//         console.log('circle move')
+//     }
+// }
+// const c = new circle ()
+// console.log (c)
+
+
+
+// ماژول ها 
+// در اپلیکیشن های واقعی باید کد هامون را سازمان دهی یا ماژول بندی کنیم یا فایل بندی هم میشه گفت 
