@@ -1384,3 +1384,60 @@
 
 // ماژول ها 
 // در اپلیکیشن های واقعی باید کد هامون را سازمان دهی یا ماژول بندی کنیم یا فایل بندی هم میشه گفت 
+// commonjs
+// به این صورت است که یک فایل دیگر باید بسازیم و داخل یکی از فایل ها اکسپورت کنیم
+// داخل اون یکی هم باید ایمپورت کنیم 
+// کدا های اکسپورت کردن
+// module.exports.circle = circle
+// یا به صورت زیر 
+// module.exports = circle
+// یا 
+// module.exports = {circle : circle }
+
+// کد های ایمپورت کردن 
+// const circle = require('./test')
+// const c = new circle(10)
+// c.draw()
+
+
+
+// برای اینکه یک کد را اجرا کنیم و بعد کد بعدی اجرا شود از کدهای زیر استفاده میشود
+// برای مثال یک توپی را قل دادیم بره پایین تا اون نرسیده نباید توپ بعدی را ول کنیم
+// async function ball1 (){
+//     if (true){
+//         return ("the ball one reached the and of the hill")
+//     }else{
+//         throw new Error();("the ball one filed")
+//     }
+
+// }
+
+// async function ball2 (){
+//     if (true){
+//         return ("the ball two reached the and of the hill")
+//     }else{
+//         throw new Error();("the ball two filed")
+//     }
+
+// }
+
+// async function ball3 (){
+//     if (true){
+//         return ("the ball three reached the and of the hill")
+//     }else{
+//         throw new Error();("the ball three filed")
+//     }
+
+// }
+
+// async function log (){
+//     try{
+//     console.log(await ball1())
+//     console.log(await ball2())
+//     console.log(await ball3())
+//     }catch(e){
+//         console.log(e)
+//     }
+// }
+
+// log()
