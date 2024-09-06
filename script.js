@@ -1259,6 +1259,8 @@
 //     }
 // }
 
+
+
 // برای اینکه ریدیوس و موو و دراو رو لاگ بگیریم فقط از کد های زیر استفاده میکنیم
 // return all members
 // circle.prototype.draw = function(){
@@ -1441,3 +1443,14 @@
 // }
 
 // log()
+
+
+// مسئله
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let x = 0                                                                       
+// numbers.forEach(i => {
+//     if (i%2===0) {
+//         x+=i
+//     }
+// });
+// console.log(x)
